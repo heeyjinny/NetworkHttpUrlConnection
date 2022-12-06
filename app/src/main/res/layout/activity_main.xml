@@ -4,15 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
+<!--  에디트텍스트, 버튼, 텍스트뷰 추가  -->
+
+    <EditText
+        android:id="@+id/editUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="주소를 입력하세요"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnRequest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:backgroundTint="@color/teal_700"
+        android:text="요청"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="textView"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editUrl" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
